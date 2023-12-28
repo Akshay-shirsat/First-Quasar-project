@@ -3,6 +3,7 @@
     <q-btn label="ajax-bar" @click="ajaxpage" class="q-mr-md" />
     <q-btn label="avatar" @click="avatarpage" class="q-mr-md" />
     <q-btn label="Form" @click="formqsr" class="q-mr-md" />
+    <q-btn label="imagesq" @click="imagesqsr" class="q-mr-md"/>
   </q-page>
 </template>
 
@@ -22,6 +23,9 @@ export default defineComponent({
       console.log('in function')
       this.$router.push("/FormQuasar");
     },
+    imagesqsr(){
+      this.$router.push("/QuasarImg")
+    }
   },
 
   // Your component options go here

@@ -7,6 +7,7 @@ const routes = [
       { path: "/AjaxBar", component: () => import("pages/AjaxBar.vue") },
       { path: "/Avatar", component: () => import("pages/AvatarComp.vue") },
       { path: "/FormQuasar", component: () => import("pages/FormQuasar.vue") },
+      {path: "/QuasarImg",component: ()=> import ("pages/QuasarImg.vue")}
     ],
   },
   // Always leave this as last one,
