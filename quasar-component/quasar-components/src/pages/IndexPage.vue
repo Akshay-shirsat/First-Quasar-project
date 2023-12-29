@@ -4,6 +4,8 @@
     <q-btn label="avatar" @click="avatarpage" class="q-mr-md" />
     <q-btn label="Form" @click="formqsr" class="q-mr-md" />
     <q-btn label="imagesq" @click="imagesqsr" class="q-mr-md"/>
+    <q-btn label="Infinite Scroling" @click="infinateScrol" class="q-mr-md"/>
+    <q-btn label="ListListitems" @click="ListListitems" class="q-mr-md"/>
   </q-page>
 </template>
 
@@ -25,6 +27,12 @@ export default defineComponent({
     },
     imagesqsr(){
       this.$router.push("/QuasarImg")
+    },
+    infinateScrol(){
+      this.$router.push("/InfiniteScroling")
+    },
+    ListListitems(){
+      this.$router.push("/ListListitems")
     }
   },
 

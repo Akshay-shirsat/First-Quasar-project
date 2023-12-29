@@ -1,20 +1,8 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-ajax-bar/>
       <q-toolbar>
-        <q-toolbar-title>
-       <q-img src="/abc.png" style="width:60px"></q-img>
-        </q-toolbar-title>
-        <div class="gt-sm">
-          <q-btn flat rounded label="Course" class="q-mr-xs" ></q-btn>
-          <q-btn outline rounded label="sign up" class="q-mr-xs"></q-btn>
-          <q-btn outline rounded label="sign In" class="q-ml-xs"></q-btn>
-          <q-avatar size="35px" class="q-ma-xs" color="orange">A</q-avatar>
-          <q-btn round icon="notifications" class="q-ma-xs"><q-badge floating color="red" rounded /></q-btn>
-        </div>
-        <div class="lt-md">
-          <q-btn
+        <q-btn
           flat
           dense
           round
@@ -22,12 +10,18 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
-        </div>
+
+        <q-toolbar-title>
+          Quasar App
+        </q-toolbar-title>
+
+        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
+
     <q-drawer
       v-model="leftDrawerOpen"
-
+      show-if-above
       bordered
     >
       <q-list>
@@ -44,6 +38,7 @@
         />
       </q-list>
     </q-drawer>
+
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -52,7 +47,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-
+import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
@@ -102,13 +97,15 @@ const linksList = [
 export default defineComponent({
   name: 'MainLayout',
 
-
+  components: {
+    EssentialLink
+  },
 
   setup () {
     const leftDrawerOpen = ref(false)
 
     return {
-
+      essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
