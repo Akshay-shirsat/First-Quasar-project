@@ -6,6 +6,8 @@
     <q-btn label="imagesq" @click="imagesqsr" class="q-mr-md"/>
     <q-btn label="Infinite Scroling" @click="infinateScrol" class="q-mr-md"/>
     <q-btn label="ListListitems" @click="ListListitems" class="q-mr-md"/>
+    <q-btn label="TablesQuasar" @click="TablesQuasar" class="q-mr-md"/>
+    <q-btn label="ClosePopup" @click="ClosePopup" class="q-mr-md"/>
   </q-page>
 </template>
 
@@ -33,6 +35,12 @@ export default defineComponent({
     },
     ListListitems(){
       this.$router.push("/ListListitems")
+    },
+    TablesQuasar(){
+      this.$router.push("/TablesQuasar")
+    },
+    ClosePopup(){
+      this.$router.push("/ClosePopup")
     }
   },
 

@@ -10,6 +10,8 @@ const routes = [
       {path: "/QuasarImg",component: ()=> import ("pages/QuasarImg.vue")},
       {path: "/InfiniteScroling",component: ()=> import ("pages/InfiniteScroling.vue")},
       {path: "/ListListitems",component: ()=> import ("pages/ListListitems.vue")},
+      {path:"/TablesQuasar", component:()=>import ("pages/TablesQuasar.vue")},
+      {path:"/ClosePopup", component:()=>import ("pages/ClosePopup.vue")}
     ],
   },
   // Always leave this as last one,
