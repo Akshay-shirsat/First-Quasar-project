@@ -8,7 +8,11 @@
     <q-btn label="ListListitems" @click="ListListitems" class="q-mr-md"/>
     <q-btn label="TablesQuasar" @click="TablesQuasar" class="q-mr-md"/>
     <q-btn label="ClosePopup" @click="ClosePopup" class="q-mr-md"/>
+    <q-btn label="InterSection" @click="InterSection" class="q-mr-md"/>
+    <q-btn label="MutationsQuasar" @click="MutationsQuasar" class="q-mr-md"/>
+    <q-btn label="BottomSheet" @click="BottomSheet" class="q-mr-md"/>
   </q-page>
+
 </template>
 
 <script>
@@ -41,8 +45,18 @@ export default defineComponent({
     },
     ClosePopup(){
       this.$router.push("/ClosePopup")
+    },
+    InterSection(){
+      this.$router.push("/InterSection")
+    },
+    MutationsQuasar(){
+      this.$router.push("/MutationsQuasar")
+    },
+    BottomSheet(){
+      this.$router.push("/BottomSheet")
     }
   },
+
 
   // Your component options go here
 });

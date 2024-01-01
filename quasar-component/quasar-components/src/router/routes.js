@@ -11,7 +11,10 @@ const routes = [
       {path: "/InfiniteScroling",component: ()=> import ("pages/InfiniteScroling.vue")},
       {path: "/ListListitems",component: ()=> import ("pages/ListListitems.vue")},
       {path:"/TablesQuasar", component:()=>import ("pages/TablesQuasar.vue")},
-      {path:"/ClosePopup", component:()=>import ("pages/ClosePopup.vue")}
+      {path:"/ClosePopup", component:()=>import ("pages/ClosePopup.vue")},
+      {path:"/InterSection", component:()=>import ("pages/InterSection.vue")},
+      {path:"/MutationsQuasar", component:()=>import ("pages/MutationsQuasar.vue")},
+      {path:"/BottomSheet", component:()=>import ("pages/BottomSheet.vue")},
     ],
   },
   // Always leave this as last one,

@@ -94,6 +94,7 @@
 </template>
 
 <script>
+import { AppFullscreen } from 'quasar'
 
 export default{
 data(){

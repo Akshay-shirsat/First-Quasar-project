@@ -17,6 +17,12 @@
       <img src="https://cdn.quasar.dev/img/avatar.png">
     </q-avatar>
 </div>
+<q-btn
+      color="secondary"
+      @click="$q.fullscreen.toggle()"
+      :icon="$q.fullscreen.isActive ? 'fullscreen_exit' : 'fullscreen'"
+      :label="$q.fullscreen.isActive ? 'Exit Fullscreen' : 'Go Fullscreen'"
+    />
 <div class="q-pa-md q-gutter-sm flex flex-center" style="height: 80px">
     <q-avatar
       v-for="n in 5"
@@ -88,3 +94,4 @@
   </div>
 </q-page>
 </template>
+

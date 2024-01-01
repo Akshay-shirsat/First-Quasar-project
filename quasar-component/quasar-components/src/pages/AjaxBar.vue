@@ -3,7 +3,13 @@
   <q-ajax-bar/>
   <q-btn label="fake request"  @click="fakeAjaxReq"></q-btn>
 <pre>{{ result }}</pre>
-
+<div>
+    <h1>Scrollable Content</h1>
+    <div ref="scrollContainer" @scroll="onScroll" style="height: 300px; overflow-y: scroll;">
+      <!-- Your scrollable content goes here -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    </div>
+  </div>
 </q-page>
 </template>
 <script>
@@ -27,7 +33,12 @@ export default{
         .finally( ()=>   {
           // always executed
         });
-    }
+    },
+    onScroll() {
+      const position = this.$refs.scrollContainer.scrollTop;
+      console.log(`Scrolled to position: ${position}px`);
+      // Your logic for handling scroll position goes here
+    },
   },
   data(){
     return{
